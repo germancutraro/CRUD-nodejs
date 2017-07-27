@@ -1,4 +1,4 @@
-# CRUD Node.Js - Express and MongoDB - 
+# CRUD Node.Js - Express and MongoDB 
 
 A customers admin application using nodejs
 
