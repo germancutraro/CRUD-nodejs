@@ -1,6 +1,6 @@
 # CRUD Node.Js - Express and MongoDB 
 
-A customers admin application using nodejs
+A customer's admin application using nodejs
 
 ## Instalation
 
