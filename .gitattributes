@@ -1,0 +1,4 @@
+*.ejs linguist-language=JavaScript
+*.css linguist-language=JavaScript
+*.json linguist-language=JavaScript
+*.Rmd linguist-language=JavaScript

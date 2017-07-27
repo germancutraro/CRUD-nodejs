@@ -1,0 +1,29 @@
+<% include partials/head.ejs %>
+<body>
+  <% include partials/nav.ejs %>
+  <section class="main-container">
+
+    <div class="container">
+      <h1>Editing <%= customer.name + ' ' + customer.surname %></h1>
+      <form action="/update/<%= customer._id %>" method="POST">
+        <div class="form-group">
+          <input type="text" class="form-control" name="name" value="<%= customer.name %>"/>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="surname" value="<%= customer.surname %>"/>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="city" value="<%= customer.city %>"/>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="phone" value="<%= customer.phone %>"/>
+        </div>
+        <div class="form-group">
+          <input type="submit" class="btn btn-primary" value="Update"/>
+        </div>
+      </form>
+    </div>
+  </section>
+  <% include partials/scripts.ejs %>
+</body>
+</html>

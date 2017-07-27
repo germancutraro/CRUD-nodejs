@@ -1,0 +1,43 @@
+<% include partials/head.ejs %>
+<body>
+  <% include partials/nav.ejs %>
+  <section class="main-container">
+  <div class="container">
+    <div class="row col-md-12">
+      <h1 class="title">Ours Customers</h1>
+      <% if (docs.length > 0) { %>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Surname</th>
+              <th>City</th>
+              <th>Phone</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% docs.forEach( customer => { %>
+              <tr>
+                <td><%= customer.name %></td>
+                <td><%= customer.surname %></td>
+                <td><%= customer.city %></td>
+                <td><%= customer.phone %></td>
+                <td>
+                   <a href="edit/<%= customer._id %>"><input type="button" class="btn btn-info" value="Edit"></a>
+                   <input type="button" class="btn btn-danger btn-delete" value="Remove" data-id="<%= customer._id %>">
+                 </td>
+             </tr>
+            <% }); %>
+          </tbody>
+        </table>
+        <% } else {  %>
+          <h4>There are no customers yet!</h4>
+        <% } %>
+        </div>
+
+    </div>
+  </section>
+  <% include partials/scripts.ejs %>
+</body>
+</html>
